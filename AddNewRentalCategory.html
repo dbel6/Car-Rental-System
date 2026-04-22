@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<!--
+Car Rental Semester 2 Project
+Student Name: Dara Loughnane 
+Student ID: C00306835  
+Screen Name: Add New Rental Category 
+Purpose: Allow user to add a new category of rental vehicles to the database and website
+-->
+<html><!--Beginning of the HTML file -->
+<head>
+<link rel="stylesheet" href="Style.css">
+</head>
+<body> <!--Beginning of the body of the file. This is used to display the contents of the code to the screen.-->
+
+<!-- Navigation Bar and Dropdown buttons -->
+<div class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car</a>
+        <div class="dropdownContent">
+            <a href="AddNewCar.html.php">Add Car</a>
+            <a href="AmendViewCar.html.php">Amend Car</a>
+            <a href="DeleteCar.html.php">Delete Car</a>
+            <a href="CarReport.html.php">Car Report</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car Type</a>
+        <div class="dropdownContent">
+            <a href="AddNewCarType.html.php">Add New Car Type</a>
+            <a href="AmendViewCarType.html.php">Amend/View Car Type</a>
+            <a href="DeleteCarType.html.php">Delete Car Type</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car Category</a>
+        <div class="dropdownContent">
+            <a href="AddNewRentalCategory.html">Add New Car Category</a>
+            <a href="AmendViewRentalCategory.html">Amend/View Car Category</a>
+            <a href="DeleteRentalCategory.html">Delete Car Category</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Company</a>
+        <div class="dropdownContent">
+            <a href="AddNewCarCompany.html.php">Add New Company</a>
+            <a href="underConstruction.html">Amend/View Company</a>
+            <a href="underConstruction.html">Delete Company</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Blacklist</a>
+        <div class="dropdownContent">
+            <a href="underConstruction.html">Add to Blacklist</a>
+            <a href="underConstruction.html">Amend/View Blacklist</a>
+            <a href="underConstruction.html">Delete from Blacklist</a>
+            <a href="BlacklistReport.php">Blacklist Report</a>
+        </div>
+    </div>
+
+    <img src="logo.png" alt="Logo" class="logo">
+</div>
+	<!-- end of navbar -->
+
+<div class="form">
+<form method="POST" action="add_category.php"> <!--Beginning of a form. A form is used for users to enter information and have it stored in the computer's memory-->
+<label for="categoryname">Category Name: </label> <!--This is a field for the user to enter the category name of their vehicle-->
+<input type="text" id="categoryname" name="categoryname" required> <!--The input information for this field and required shows that this piece of information is required, meaning users must enter it.-->
+<br><br> 
+<label for="RentalCategoryID">Rental Category Identification: </label> <!--This is a field for user the use to enter the rental category Identification of their vehicle-->
+<input type="int" id="RentalCategoryID" name="RentalCategoryID" maxlength="11"> <!--This is the input information for rental category ID. Maxlength means the user can enter a maximum of eleven (11) characters-->
+<br><br>
+<label for="StandardCostPerDay">Standard Cost Per Day: </label> <!--This field is used to enter the standard cost per day of their vehicle which is the day to day cost of their vehicle-->
+<input type="int" name="StandardCostPerDay" id="StandardCostPerDay" maxlength="11" required> <!--This is the requirement for this field. It is supposed to be a number, the user may need to enter a number. Maxlength means the user can enter a maximum of eleven (11) characters-->
+<br><br>
+<label for="FiveDayDiscountPercent">Five Day Discount (%): </label> <!--This field is for the user to enter the Five Day discount of their vehicle-->
+<input type="int" name="FiveDayDiscountPercent" id="FiveDayDiscountPercent" maxlength="11" required> <!--This is a required piece of information. Since we are woring with percentages, users may be required to enter a number. Maxlength means the user can enter a maximum of eleven (11) characters-->
+<br><br> 
+<label for="TenDayDiscountPercent">Ten Day Discount (%): </label> <!--This field is for the user to enter the Ten Day discount cost of their vehicle-->
+<input type="int" name="TenDayDiscountPercent" maxlength="11" required> <!--This is a required piece of information. Since we are working with percentages, the user may be required to enter a number. Maxlength means the user can enter a maximum of eleven (11) characters-->
+<br><br>
+<input class="submit" type="submit" value="Submit"><!--Button for user to click when they want to submit their information -->
+<input class="reset" type="reset" value="Clear"><!--Button for user to click when they want to clear their information from the form-->
+</form> <!--End of the form-->
+</div>
+</body> <!--The end of the body of the file-->
+</html> <!--The end of the HTML file-->

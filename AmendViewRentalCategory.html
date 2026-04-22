@@ -1,0 +1,126 @@
+<!DOCTYPE html> 
+<!--Student Name: Dara Loughnane 
+Student ID: C00306835 
+Purpose: Used to view the details of a vehicle in the database
+Amend/View Rental Category screen for Year 2 Semester 2 Car Rental Project-->
+<html> <!--Beginning of HTML file-->
+<head>
+<title>Amend/View Rental Category</title> <!--Title which is the name of this screen and file-->
+<link rel="stylesheet" href="Style.css">
+<script>
+// Unlock fields when Amend is clicked 
+function enableEdit()
+{
+document.getElementById("StandardCostPerDay").disabled = false;
+document.getElementBYId("FiveDayDiscount").disabled = false;
+document.getElementById("TenDayDiscount").disabled = false; 
+}
+	
+// Confirmation before saving
+function confirmUpdate()
+{
+return confirm("Please confirm that the details are correct (Y/N)");		
+}
+</script>
+</head>
+<body> <!--Display contents to the screen for users to view and interact with-->
+
+	<!-- Navigation Bar and Dropdown buttons -->
+<div class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car</a>
+        <div class="dropdownContent">
+            <a href="AddNewCar.html.php">Add Car</a>
+            <a href="AmendViewCar.html.php">Amend Car</a>
+            <a href="DeleteCar.html.php">Delete Car</a>
+            <a href="CarReport.html.php">Car Report</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car Type</a>
+        <div class="dropdownContent">
+            <a href="AddNewCarType.html.php">Add New Car Type</a>
+            <a href="AmendViewCarType.html.php">Amend/View Car Type</a>
+            <a href="DeleteCarType.html.php">Delete Car Type</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car Category</a>
+        <div class="dropdownContent">
+            <a href="AddNewRentalCategory.html">Add New Car Category</a>
+            <a href="AmendViewRentalCategory.html">Amend/View Car Category</a>
+            <a href="DeleteRentalCategory.html">Delete Car Category</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Company</a>
+        <div class="dropdownContent">
+            <a href="AddNewCarCompany.html.php">Add New Company</a>
+            <a href="underConstruction.html">Amend/View Company</a>
+            <a href="underConstruction.html">Delete Company</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Blacklist</a>
+        <div class="dropdownContent">
+            <a href="underConstruction.html">Add to Blacklist</a>
+            <a href="underConstruction.html">Amend/View Blacklist</a>
+            <a href="underConstruction.html">Delete from Blacklist</a>
+            <a href="BlacklistReport.php">Blacklist Report</a>
+        </div>
+    </div>
+
+    <img src="logo.png" alt="Logo" class="logo">
+</div>
+	<!-- end of navbar -->
+<h1>Amend/View Rental Category</h1>
+<div class="form">
+<form action="amendview.php" method="post" onsubmit="return confirmUpdate()">
+<select name="rentalCategories" id="rentalCategories"> <!--ListBox/Dropdown Menu for user to select the rental category of the vehicle they have-->
+    <option value="sedan">Sedan</option>
+	<option value="hatchback">Hatchback</option>
+	<option value="SUV">SUV</option>
+	<option value="Crossover">Crossover</option>
+	<option value="Electric">Electric</option>
+	<option value="Hybrid">Hybrid</option>	
+</select>
+<br><br>
+
+<!--Category ID (not editable)-->
+<label>Rental Category ID: </label>	
+<input type="int" name="RentalCategoryID" value="" readonly>
+<br><br>
+	
+<!--Standard Cost Per Day-->
+<label>Standard Cost Per Day: </label>
+<input type="int" name="StandardCostPerDay" id="StandardCostPerDay" value="" disabled>
+<br><br>
+
+<!--Five Day Discount-->
+<label>Five Day Discount (%): </label>
+<input type="int" name="FiveDayDiscount" id="FiveDayDiscount" value="" disabled>
+<br><br>
+	
+<!--Ten Day Discount-->
+<label>Ten Day Discount (%): </label>
+<input type="int" name="TenDayDiscount" id="TenDayDiscount" value="" disabled>
+<br><br>
+	
+<!--Buttons-->
+<input type="button" value="Amend" onclick="enableEdit()"> <!--Button to amend information-->
+
+<input class="submit" type="submit" value="Save Changes"> <!--Button to the save the changes made if user made any changes-->
+	
+<input class="reset" type="reset" value="Cancel"> <!--Button to cancel all the work and return the file back to normal-->
+	
+
+</form>
+</body> <!--End of the body. Body closing tag--> 
+</html> <!-- End of the HTML file-->

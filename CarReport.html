@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--Student Name: Dara Loughnane 
+Student ID: C00306835  
+Purpose: Gets input from user about the vehicle they are renting and stores into the database 
+Car Report screen for Year 2 Semester 2 Car Rental Project-->
+<html> <!--Beginning of HTML file-->
+<head> 
+    <title>Car Report</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<!-- Navigation Bar and Dropdown buttons -->
+<div class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car</a>
+        <div class="dropdownContent">
+            <a href="AddNewCar.html.php">Add Car</a>
+            <a href="AmendViewCar.html.php">Amend Car</a>
+            <a href="DeleteCar.html.php">Delete Car</a>
+            <a href="CarReport.html.php">Car Report</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car Type</a>
+        <div class="dropdownContent">
+            <a href="AddNewCarType.html.php">Add New Car Type</a>
+            <a href="AmendViewCarType.html.php">Amend/View Car Type</a>
+            <a href="DeleteCarType.html.php">Delete Car Type</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Car Category</a>
+        <div class="dropdownContent">
+            <a href="AddNewRentalCategory.html">Add New Car Category</a>
+            <a href="AmendViewRentalCategory.html">Amend/View Car Category</a>
+            <a href="DeleteRentalCategory.html">Delete Car Category</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Company</a>
+        <div class="dropdownContent">
+            <a href="AddNewCarCompany.html.php">Add New Company</a>
+            <a href="underConstruction.html">Amend/View Company</a>
+            <a href="underConstruction.html">Delete Company</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Blacklist</a>
+        <div class="dropdownContent">
+            <a href="underConstruction.html">Add to Blacklist</a>
+            <a href="underConstruction.html">Amend/View Blacklist</a>
+            <a href="underConstruction.html">Delete from Blacklist</a>
+            <a href="BlacklistReport.php">Blacklist Report</a>
+        </div>
+    </div>
+
+    <img src="logo.png" alt="Logo" class="logo">
+</div>
+	<!-- end of navbar -->
+
+<h1>Car Report</h1>
+<body> <!--Used to display contents to the screen for the users to view and interact with.-->
+<div class="form">
+<form method="$_POST" action="car_report.php"> <!--This is a form. It is used to gain information from the user as they input it into the database-->
+<label for="registrationNumber">Registration Number: </label><!--Label for user to enter the registration number of the vehicle they are renting--> 
+<input type="text" id="registrationNumber" name="registrationNumber" required/><!--This is what is required for this field. The user is required to enter the registration number of the vehicle they are renting-->
+<br>
+<label for="modelNumber">Model Number: </label><!--Label to show the user where they enter the model number of their vehicle-->
+<input type="number" id="modelNumber" name="modelNumber" required/><!--This is what is required for this field. Users are rquired to enter the model number of their vehicle-->
+<br>
+<label for="manufacturer">Manufacturer: </label><!--Label to show user where to enter the manufacturer of their vehicle-->
+<input type="text" id="manufacturer" name="manufacturer" required/><!--Requirement for the field. It is text the user must enter and they must enter it when completing the form-->
+<br>
+<label for="currentStatus">Current Status: </label><!--Label to show user the field where they enter the current staus of their vehicle-->
+<input type="text" id="currentStatus" name="currentStatus" required/><!--The input needed for this field is text. Users must enter it as well since it is required for the form-->
+<br>
+<label for="dateAddedToFleet">Date Added to Fleet: </label><!--Field where user enters the date that their vehicle was added to the fleet-->
+<input type="date" id="dateAddedToFleet" name="dateAddedToFleet" required/><!--A date is required for this field. This input is required for the form also-->
+<br>
+<label for="cumulativeRentals">Cumulative Rentals</label><!--Field where user enters the cumulative rentals. Cumulative rentals refers to the total amount of rent or rental charges that have been paid to the company over a specific timeframe for the vehicle-->
+<input type="text" id="cumulativeRentals" name="cumulativeRentals"/><!--Input for the field-->
+<br>
+<button id="modelButton">Model Button</button><!--Button to show the model of the vehicles-->
+<button id="popularCarsButton">Popular Cars Button</button><!--Button to show the Popular Car models-->
+<button id="ageOfFleetButton">Age of Fleet button</button><!--Button to show the vehicle's age on the fleet-->
+</form>
+</div>
+</body> <!--End of the body. Closing tag-->
+</html> <!--End of HTML file-->
