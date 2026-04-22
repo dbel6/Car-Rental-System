@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    Name Of Screen: Add New Car Type html
+    Purpose Of Screen: Allow the user to add a car type to the database
+    Student ID: C00310562
+    Name: Conor Shiel
+    Date: 02/26
+    Notes Used: PHP3 Web Dev
+    -->
+
+    <!--Navigation bar with the logo styled green in css-->
+<div class="navbar">
+
+    <a href="AddNewCarType.html">Add Car Type</a>
+    <a href="AmendViewCarType.html.php">Amend/View Car Type</a>
+    <a href="DeleteCarType.html.php">Delete Car Type</a>
+    <a href="CompanyReport.php">Company Report</a>
+
+    <img src="logo.png" alt="Company Logo" class="logo">
+</div>
+
+    <!--Javascript-->
+<script>
+    //function to make a "are you sure" pop up
+    function confirmCheck()
+    {
+        var response
+        response = confirm('Are you sure you want to save these changes?');
+        if(response)
+        {
+            return true;
+        }
+        
+        else
+        {
+            populate();
+            toggleLock();
+            return false;
+        }
+    }
+</script>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new car</title>
+        <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+
+<body>
+	<h1>Add New Car Type</h1>
+	
+        <!--Takes user to AddNewCarType file when confirm check is true -->
+    <form action="AddNewCarType.php" onsubmit="return confirmCheck()" method = "Post" class = "form">
+
+        <!--Model Name Column input -->
+    <label for = "modelName">
+            Model Name:
+    </label>
+    <input type = "text" name = "modelName" id = "modelName" placeholder="Enter Car Model Name" required minlength="2" maxlength="40" pattern = "^[a-zA-Z0-9\s'-]{2,40}$">
+    <div></div>
+    
+        <!--Version Column input -->
+    <label for = "version">
+            Version:
+        </label>
+    <input type = "text" name = "version" id = "version" placeholder="Enter Car Version" required minlength="2" maxlength="40" pattern = "^[a-zA-Z0-9\s'-]{2,40}$">
+    <div></div>
+
+        <!--Engine Size Column input -->
+    <label for = "engineSize">
+            Engine Size:
+    </label>
+    <input type = "text" name = "engineSize" id = "engineSize" placeholder="Enter Car Engine Size" required minlength="2" maxlength="10" pattern = "^[a-zA-Z0-9.\s]{1,10}$">
+    <div></div>
+
+            <!--Fuel Type Column dropdown input -->
+    <label for = "fuelType">
+            Fuel type:
+    </label>
+            <!--Dropdown Options -->
+        <select name="fuelType" id="fuelType" required>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="Ethanol">Ethanol</option>
+        <option value="Petrol/Ethanol">Petrol/Ethanol</option>
+        <option value="HVO">HVO</option>
+        <option value="Diesel/HVO">Diesel/HVO</option>
+        <option value="Electric">Electric</option>
+        <option value="Plug In Hybrid Petrol">Plug in Hybrid Petrol</option>
+        <option value="Plug In Hybrid Diesel">Plug in Hybrid Diesel</option>
+
+
+        </select>
+
+        <div></div>
+    <div></div>
+        <!--Manufacturer Column input -->
+    <label for = "manufacturer">
+            Manufacturer:
+    </label>
+    <input type = "text" name = "manufacturer" id = "manufacturer" placeholder="Enter Car Manufacturer" required minlength="2" maxlength="50" pattern = "^[a-zA-Z0-9\s'-]{2,50}$">
+    <div></div>
+
+            <!--Rental category Column dropdown input -->
+    <label for = "rentalCategory">
+        Rental Category:
+        </label>
+            <!--Dropdown options -->
+        <select name="rentalCategory" id="rentalCategory" required>
+        <option value="">-- Select --</option>
+        <option value="R">R</option>
+        <option value="S">S</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="Eco">Eco</option>
+
+
+        </select>
+
+        <div></div>
+
+            <!--Deleted Flag input -->
+    <label for = "deletedFlag">
+            Deleted Flag:
+    </label>        
+    <select name="deletedFlag" id="deletedFlag" >
+        <option value="0">Not Deleted (0)</option>
+        <option value="1">Deleted (1)</option>
+</select>
+
+    <div></div>
+
+            <!--Purchase Price Flag input -->
+    <label for = "purchasePrice">
+            Purchase Price:
+    </label>
+    <input type = "text" name = "purchasePrice" id = "purchasePrice" placeholder="Enter Car Purchase Price" minlength="2" maxlength="15" required>
+    <div></div>
+
+    <input type="submit" value = "Submit"/>
+    <input type="reset" value = "Clear"/>
+
+    </form>
+</body>
+
+</html>
