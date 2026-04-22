@@ -1,0 +1,253 @@
+/*
+    Student Name : 		  Daniel Belov
+    Student Id Number : CO0306133
+    Date :				      12/2/2026
+    Purpose : 			    To complete css part of Project
+*/
+
+body
+/*Modifies body of page*/
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /*Displays a modern font for the page*/
+    background-color: #f4f6f8;
+    /*Displays a background color of light grey*/
+    margin: 0;
+    /*Ensures menu fits screen*/
+}
+
+.menu
+/*Modifies menu*/
+{
+  display: flex;
+  /*Displays a flexbox layout for the menu allowing for spacing of menu buttons*/
+  gap: 20px;
+  /*Displays a gap of size 20px between the menu buttons for better spacing*/
+  margin: auto;
+  /*Horizontally centers the form within the page*/
+  width: auto;
+  /*Displays a full width for the form*/
+  padding: 20px;
+  /*Displays a padding of size 20px for the form giving extra space around the edges*/
+  background-color: #006400;
+  /*Displays a background color of dark green for the form*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*Displays a modern font for the form*/
+}
+
+.menu a
+/*Modifies the buttons for the menu*/
+{
+  width: 100%;
+  /*Displays a width of 100% for the buttons*/
+  background-color: white;
+  /*Displays a background color of white for the buttons*/
+  color: darkgreen;
+  /*Displays a text color of dark green for the buttons*/
+  padding: 14px;
+  /*Displays a padding of size 14px for the buttons giving extra space around the edges*/
+  border: none;
+  /*Displays no border for the buttons*/
+  border-radius: 10px;
+  /*Displays a border radius of size 10px for the buttons rounding the corners*/
+  cursor: pointer;
+  /*Displays a cursor of style pointer for the buttons*/
+  text-decoration: none;
+  /*Removes underline from button*/
+  text-align: center;
+  /*Aligns text to center*/
+}
+
+.title
+/*Modifies title of form*/
+{
+  text-align: center;
+  /*Aligns title to the centre*/
+  color: #006400;
+  /*Displays a text color of dark green for the title*/
+}
+
+#display
+/*Modifies the display of text*/
+{
+  text-align: center;
+  /*Aligns display to the centre*/
+  color: #006400;
+  /*Displays a text color of dark green for the display*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*Displays a modern font for the display*/
+}
+
+form
+/*Modifies form*/
+{
+  position: relative;
+  /*Gives the ability to move form around relative to its normal position*/
+  margin: auto;
+  /*Horizontally centers the form within the page*/
+  width: 400px;
+  /*Displays a width of size 400px for the form*/
+  padding: 20px;
+  /*Displays a padding of size 20px for the form giving extra space around the edges*/
+  background-color: white;
+  /*Displays a background color of white for the form*/
+  color: darkgreen;
+  /*Displays a text color of dark green for the form*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /*Displays a modern font for the form*/
+  border-radius: 10px;
+  /*Displays a border radius of size 10px for the form rounding the corners*/
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1); 
+  /*Creates a sutble shadow behind the form*/
+}
+
+input[type=text],
+input[type=url],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=date],
+textarea
+/*Modifies the text, url, email, number, telephone, date and textarea input boxes, aligning all vertically*/
+{
+  position: absolute;
+  /*Gives the ability to move boxes around relative to the nearest positioned ancestor*/
+  left: 220px;
+  /*Positions boxes 220px away from start of page positioning it to the right*/
+  width: 45%;
+  /*Displays a width of size 45%*/
+  padding: 12px;
+  /*Displays a padding of size 12px giving extra space around the edges*/
+  margin-top: -30px;
+  /*Displays a margin of size -30px positioning boxes up*/
+  border: 1px solid #ccc;
+  /*Displays a solid border of size 1px in the color light grey*/
+  border-radius: 10px;
+  /*Displays a border radius of size 10px rounding the corners*/
+  box-sizing: border-box;
+  /*Displays a box sizing of border box allowing the padding and border to be included in the forms total width and height*/
+}
+
+input[type=submit]
+/*Modifies the submit button for the form*/
+{
+  width: 49%;
+  /*Displays a width of 49%*/
+  background-color: #f4f6f8;
+  /*Displays a background color of white*/
+  color: black;
+  /*Displays a text color of black*/
+  padding: 14px;
+  /*Displays a padding of size 14px giving extra space around the edges*/
+  border: 2px, solid, #20d81d;
+  /*Displays a solid light green border of size 2px*/
+  border-radius: 10px;
+  /*Displays a border radius of size 10px rounding the corners*/
+  cursor: pointer;
+  /*Displays a cursor of style pointer*/
+}
+
+input[type=reset]
+/*Modifies the clear button for the form*/
+{
+  width: 49%;
+  /*Displays a width of 49%*/
+  background-color: #f4f6f8;
+  /*Displays a background color of white*/
+  color: black;
+  /*Displays a text color of black*/
+  padding: 14px;
+  /*Displays a padding of size 14px giving extra space around the edges*/
+  border: 2px, solid, #d81d1d;
+  /*Displays a solid red border of size 2px*/
+  border-radius: 10px;
+  /*Displays a border radius of size 10px rounding the corners*/
+  cursor: pointer;
+  /*Displays a cursor of style pointer*/
+}
+
+.fullsubmit input[type=submit]
+/*Modifies the submit button for the amend and delete forms*/
+{
+  width: 100%;
+  /*Displays a width of 100%*/
+  background-color: #f4f6f8;
+  /*Displays a background color of white*/
+  color: black;
+  /*Displays a text color of black*/
+  padding: 14px;
+  /*Displays a padding of size 14px giving extra space around the edges*/
+  border: 2px, solid, #20d81d;
+  /*Displays a solid light green border of size 2px*/
+  border-radius: 10px;
+  /*Displays a border radius of size 10px rounding the corners*/
+  cursor: pointer;
+  /*Displays a cursor of style pointer*/
+}
+
+input[type=submit]:hover
+/*Modifies the submit button when mouse hovers over*/
+{
+  background-color: #20d81d;
+  /*Displays a background color of light green when mouse hovers over*/
+  transition: 1s;
+  /*Gives delay for the color change*/
+}
+
+input[type=reset]:hover
+/*Modifies the clear button when mouse hovers over*/
+{
+  background-color: #d81d1d;
+  /*Displays a background color of red when mouse hovers over*/
+  transition: 1s;
+  /*Gives delay for the color change*/
+}
+
+input,
+select[name="AmendViewCarCompany"]
+/*Modifies the listbox options for amend view company screen*/
+{
+    width: 49%;
+    /*Displays a width of 49%*/
+    padding: 12px;
+    /*Displays a padding of size 12px giving extra space around the edges*/
+    margin-top: -30px;
+    /*Displays a margin of size -30px positioning boxes up*/
+    border: 2px solid #ccc;
+    /*Displays a solid light grey border of size 2px*/
+    border-radius: 10px;
+    /*Displays a border radius of size 10px rounding the corners*/
+}
+
+input,
+select[name="DeleteCarCompany"],
+select[name="Rentals"],
+select[name="CarID"]
+/*Modifies the listbox options for delete company and rental screens*/
+{
+    width: 100%;
+    /*Displays a width of 100%*/
+    padding: 12px;
+    /*Displays a padding of size 12px giving extra space around the edges*/
+    margin-top: -30px;
+    /*Displays a margin of size -30px positioning boxes up*/
+    border: 2px solid #ccc;
+    /*Displays a solid light grey border of size 2px*/
+    border-radius: 10px;
+    /*Displays a border radius of size 10px rounding the corners*/
+}
+
+input[type=button]
+/*Modifies the amend and view buttons*/
+{
+    width: 49%;
+    /*Displays a width of 49%*/
+    padding: 12px;
+    /*Displays a padding of size 12px giving extra space around the edges*/
+    margin-top: -30px;
+    /*Displays a margin of size -30px positioning boxes up*/
+    border: 2px solid #ccc;
+    /*Displays a solid light grey border of size 2px*/
+    border-radius: 10px;
+    /*Displays a border radius of size 10px rounding the corners*/
+}
