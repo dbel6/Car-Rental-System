@@ -80,10 +80,7 @@ if (($amountOwed + $cost) > $creditLimit) {
 ## How to run
 Requirements: A local server running PHP and MySQL (e.g. XAMPP)
 1. Start XAMPP and ensure both Apache and MySQL are running
-2. Open phpMyAdmin at
-```bash
-   http://localhost/phpmyadmin
-```
+2. Open phpMyAdmin at http://localhost/phpmyadmin
 4. Create a database and import the SQL dump to set up the tables and sample data
 5. Copy the project folder into your XAMPP htdocs directory
 6. Open your browser and go to http://localhost/CarRental/index.html
