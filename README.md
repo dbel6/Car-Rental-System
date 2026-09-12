@@ -86,6 +86,7 @@ Requirements: A local server running PHP and MySQL (e.g. XAMPP)
 6. Open your browser and go to http://localhost/CarRental/index.html
 
 ## Project Structure
+```
 ├── Car/
 │   ├── AddNewCar.html.php
 │   ├── AmendViewCar.html.php
@@ -109,6 +110,7 @@ Requirements: A local server running PHP and MySQL (e.g. XAMPP)
 ├── navbar.php
 ├── index.html
 └── README.md
+```
 
 ## Built with
 - PHP
