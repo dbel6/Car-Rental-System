@@ -86,6 +86,29 @@ Requirements: A local server running PHP and MySQL (e.g. XAMPP)
 6. Open your browser and go to http://localhost/CarRental/index.html
 
 ## Project Structure
+├── Car/
+│   ├── AddNewCar.html.php
+│   ├── AmendViewCar.html.php
+│   ├── DeleteCar.html.php
+│   └── CarReport.html
+├── CarCategory/
+│   ├── AddNewRentalCategory.html
+│   ├── AmendViewRentalCategory.html
+│   └── DeleteRentalCategory.html
+├── CarCompany/
+│   ├── AddNewCarCompany.html.php
+│   ├── AmendViewCarCompany.html.php
+│   ├── DeleteCarCompany.html.php
+│   ├── CompanyReport.php
+│   └── Rentals.html.php
+├── CarType/
+│   ├── AddNewCarType.html
+│   ├── AmendViewCarType.html.php
+│   └── DeleteCarType.html.php
+├── Style.css
+├── navbar.php
+├── index.html
+└── README.md
 
 ## Built with
 - PHP
